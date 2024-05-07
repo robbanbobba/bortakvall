@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Betala</title>
+</head>
+<body id="kassakropp">
+    <div id="popUpBackground" class="hidden">
+        <div class="popup-content">
+            <p id="tack"></p>
+            <button id="takeMeBack">Tillbaka till start</button>
+        </div>
+    </div> 
+    <div id="popupError" class="hidden">
+        <div class="popup-content-error">
+            <p id="ErrorMsg"></p>
+            <button id="closePopup">Till start</button>
+        </div>
+    </div>
+    <h1>Välkommen till kassan!</h1>
+    <h2>Här kan du se din varukorg:</h2>
+    <div id="rullband" class="card hidden"></div>
+    <h3>Vill du ha mer?</h3>
+    <button id="mera">Tillbaka till butiken</button>
+    <h3>Fyll i dina uppgifter och slutför din order!</h3>
+    <div id="error" class="hidden">
+        <div class="popup-content">
+            <div id="popupMessage"></div>
+            <button id="closePopupButton">Return</button>
+        </div>
+    </div>
+    
+    <div id="formulär">
+        <form id="personForm" novalidate>
+            <div class="row">
+                <div class="col">
+                    <label for="namn" class="form-label">* Förnamn: </label>
+                    <input type="text" id="namn" class="form-control" placeholder="Godis">
+                    <div class="invalid-feedback">
+                        Var god ange förnamn
+                    </div>
+                    <div class="valid-feedback">
+                        Korrekt!
+                    </div>
+                </div>
+                <div class="col">
+                    <label for="namn" class="form-label">* Efternamn: </label>
+                    <input type="text" id="efternamn" class="form-control" placeholder="Glädjesson">
+                    <div class="invalid-feedback">
+                        Var god ange efternamn
+                    </div>
+                    <div class="valid-feedback">
+                        Korrekt!
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col">
+                    <label for="adress" class="form-label">* Adress: </label>
+                    <input type="text" id="adress" placeholder="Godisgatan 777" class="form-control">
+                    <div class="invalid-feedback">
+                        Vi behöver din adress!
+                    </div>
+                    <div class="valid-feedback">
+                        Korrekt!
+                    </div>
+                </div>
+                <div class="col">
+                    <label for="postnr" class="form-label">* Postnummer: </label>
+                    <input type="text" id="postnr" placeholder="123 45" maxlength="6" class="form-control">
+                    <div class="invalid-feedback">
+                        Var god fyll i postnummer
+                    </div>
+                    <div class="valid-feedback">
+                        Korrekt!
+                    </div>
+                </div>
+            </div>
+            <label for="ort" class="form-label">* Ort: </label>
+            <input type="text" id="ort" placeholder="Godisbyn" class="form-control">
+            <div class="invalid-feedback">
+                Fyll i din ort!
+            </div>
+            <div class="valid-feedback">
+                Korrekt!
+            </div>
+            <label for="telefon" class="form-label">Telefon: </label>
+            <input type="tel" id="telefon" class="form-control">
+            <label for="e-post" class="form-label">*E-post: </label>
+            <input type="email" id="e-post" placeholder="godisgodisson@godis.nu" class="form-control">
+            <div class="invalid-feedback">
+                Vi behöver din e-post!
+            </div>
+            <div class="valid-feedback">
+                Korrekt!
+            </div>
+            <p>* = Obligatoriskt fält</p>
+            <button type="submit">Skicka!</button>
+        </form>
+        <div id="responsruta"></div>
+      </div>
+      <script type="module" src="/src/main.ts"></script>
+</body>
+</html>
